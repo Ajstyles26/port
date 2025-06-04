@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Support Dashboard</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 0; padding: 20px;}
+        table {width: 100%; border-collapse: collapse; margin-top: 20px;}
+        th, td {border: 1px solid #ccc; padding: 8px; text-align: left;}
+        th {background: #333; color: white;}
+    </style>
+</head>
+<body>
+    <h1>Technical Support Tickets</h1>
+    <table id="ticket-table">
+        <thead>
+            <tr><th>ID</th><th>Issue</th><th>Status</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        const tickets = [
+            {id:1, issue:'Login problem', status:'Open'},
+            {id:2, issue:'Payment not processed', status:'Resolved'}
+        ];
+        const tbody = document.querySelector('#ticket-table tbody');
+        tickets.forEach(t => {
+            tbody.insertAdjacentHTML('beforeend', `<tr><td>${t.id}</td><td>${t.issue}</td><td>${t.status}</td></tr>`);
+        });
+    </script>
+</body>
+</html>

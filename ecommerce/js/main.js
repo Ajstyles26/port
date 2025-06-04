@@ -58,11 +58,26 @@ function renderCart() {
   document.getElementById('cart-total').innerText = total.toFixed(2);
 }
 
-function checkout() {
-  alert('Checkout is not implemented.');
-  localStorage.removeItem('cart');
-  renderCart();
-  loadCart();
+async function checkout() {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  if (!cart.length) {
+    alert('Your cart is empty');
+    return;
+  }
+  const response = await fetch('https://localhost:5001/api/checkout', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ items: cart })
+  });
+  const result = await response.json();
+  if (result.success) {
+    alert('Checkout completed with Stripe demo');
+    localStorage.removeItem('cart');
+    renderCart();
+    loadCart();
+  } else {
+    alert('Checkout failed');
+  }
 }
 
 // Setup on load
