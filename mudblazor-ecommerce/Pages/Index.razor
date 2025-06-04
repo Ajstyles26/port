@@ -1,0 +1,26 @@
+@page "/index"
+@inject NavigationManager Nav
+@inject AuthenticationStateProvider AuthProvider
+
+<h1>Products</h1>
+
+<AuthorizeView>
+    <Authorized>
+        <MudText>Welcome!</MudText>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Logout">Logout</MudButton>
+    </Authorized>
+    <NotAuthorized>
+        @Nav.NavigateTo("login", true)
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private async Task Logout()
+    {
+        if (AuthProvider is SimpleAuthStateProvider provider)
+        {
+            provider.SignOut();
+            Nav.NavigateTo("login", true);
+        }
+    }
+}

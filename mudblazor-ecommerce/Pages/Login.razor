@@ -1,0 +1,23 @@
+@page "/"
+@inject NavigationManager Nav
+@inject AuthenticationStateProvider AuthProvider
+
+<MudPaper Class="pa-4 mx-auto" MaxWidth="300px">
+    <MudTextField @bind-Value="email" Label="Email" Variant="Variant.Outlined" />
+    <MudTextField @bind-Value="password" Label="Password" Variant="Variant.Outlined" InputType="InputType.Password" />
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="HandleLogin">Login</MudButton>
+</MudPaper>
+
+@code {
+    private string email = string.Empty;
+    private string password = string.Empty;
+
+    private void HandleLogin()
+    {
+        if (AuthProvider is SimpleAuthStateProvider provider)
+        {
+            provider.SignIn(email);
+            Nav.NavigateTo("index", true);
+        }
+    }
+}

@@ -16,3 +16,6 @@ product list. You can extend it and connect a database as needed.
 
 ## Running
 Open `ecommerce/index.html` in any modern browser to view the store. Cart contents persist in the browser using `localStorage`.
+
+## MudBlazor Ecommerce (Login First)
+A simple Blazor Server app using MudBlazor components is available in the `mudblazor-ecommerce` folder. The application starts on the login page (`/`) and navigates to the product listing after successful login.
