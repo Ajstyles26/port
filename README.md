@@ -1,21 +1,25 @@
 # Simple E-commerce Example
 
-This project started as a static client-side demo. The `ecommerce` directory now also provides signup and login pages that talk to an ASP.NET Core backend. Checkout posts cart data to a demo Stripe endpoint served by the backend.
+This repository hosts a sample e-commerce solution built with Blazor Server and MudBlazor components. The previous static `ecommerce` site has been removed. A minimal ASP.NET Core backend is still available in `ecommerce-backend` exposing a `/api/products` endpoint.
 
-The repository also includes a basic ASP.NET Core backend in `ecommerce-backend`.
-This backend exposes a simple `/api/products` endpoint returning the sample
-product list. You can extend it and connect a database as needed.
+## MudBlazor Ecommerce
 
-## Files
-- `index.html` – product listing
-- `cart.html` – displays items added to the cart
-- `login.html` / `signup.html` – basic authentication
-- `css/style.css` – basic styles
-- `js/main.js` – handles cart logic
-- `js/auth.js` – handles login and signup requests
+Run the Blazor app from the `mudblazor-ecommerce` folder:
 
-## Running
-Open `ecommerce/index.html` in any modern browser to view the store. Cart contents persist in the browser using `localStorage`.
+```bash
+cd mudblazor-ecommerce
+dotnet run
+```
 
-## MudBlazor Ecommerce (Login First)
-A simple Blazor Server app using MudBlazor components is available in the `mudblazor-ecommerce` folder. The application starts on the login page (`/`) and navigates to the product listing after successful login.
+The application starts on the login page and navigates to the product list after you sign in.
+
+## Backend API
+
+To start the optional backend API:
+
+```bash
+cd ecommerce-backend
+dotnet run
+```
+
+The API listens on `https://localhost:5001` by default.
