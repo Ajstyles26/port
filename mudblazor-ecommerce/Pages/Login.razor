@@ -1,6 +1,8 @@
 @page "/"
 @inject NavigationManager Nav
 @inject AuthenticationStateProvider AuthProvider
+@inject EcommerceBackend.Repositories.IUserRepository UserRepo
+@inject Microsoft.AspNetCore.Identity.PasswordHasher<EcommerceBackend.Models.User> Hasher
 
 <MudPaper Class="pa-4 mx-auto" MaxWidth="300px">
     <MudTextField @bind-Value="email" Label="Email" Variant="Variant.Outlined" />
@@ -14,7 +16,22 @@
 
     private void HandleLogin()
     {
-        if (AuthProvider is SimpleAuthStateProvider provider)
+        if (AuthProvider is not SimpleAuthStateProvider provider)
+            return;
+
+        var user = UserRepo.GetByEmail(email);
+        if (user == null)
+        {
+            var newUser = new EcommerceBackend.Models.User { Email = email };
+            newUser.PasswordHash = Hasher.HashPassword(newUser, password);
+            UserRepo.Add(newUser);
+            provider.SignIn(email);
+            Nav.NavigateTo("index", true);
+            return;
+        }
+
+        var result = Hasher.VerifyHashedPassword(user, user.PasswordHash, password);
+        if (result == Microsoft.AspNetCore.Identity.PasswordVerificationResult.Success)
         {
             provider.SignIn(email);
             Nav.NavigateTo("index", true);

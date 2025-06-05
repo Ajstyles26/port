@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using MudBlazor.Services;
 using mudblazor_ecommerce.Services;
+using EcommerceBackend.Repositories;
+using EcommerceBackend.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthStateProvider>();
+builder.Services.AddSingleton<IUserRepository, UserRepository>();
+builder.Services.AddSingleton<Microsoft.AspNetCore.Identity.PasswordHasher<User>>();
 
 var app = builder.Build();
 
