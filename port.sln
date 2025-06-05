@@ -2,9 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce-backend", "ecommerce-backend\ecommerce-backend.csproj", "{D29F07E6-43CA-0C0E-651D-00202E36AA73}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce.Data", "ecommerce.Data\ecommerce.Data.csproj", "{D29F07E6-43CA-0C0E-651D-00202E36AA73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mudblazor-ecommerce", "mudblazor-ecommerce\mudblazor-ecommerce.csproj", "{4D434349-C105-8176-9C29-E4CA1980E758}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce.portal", "ecommerce.portal\ecommerce.portal.csproj", "{4D434349-C105-8176-9C29-E4CA1980E758}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce.Business", "ecommerce.Business\ecommerce.Business.csproj", "{9CAB1EE6-4549-4AD1-BA70-ED843ABAED2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{4D434349-C105-8176-9C29-E4CA1980E758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D434349-C105-8176-9C29-E4CA1980E758}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D434349-C105-8176-9C29-E4CA1980E758}.Release|Any CPU.Build.0 = Release|Any CPU
+                {9CAB1EE6-4549-4AD1-BA70-ED843ABAED2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+                {9CAB1EE6-4549-4AD1-BA70-ED843ABAED2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+                {9CAB1EE6-4549-4AD1-BA70-ED843ABAED2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+                {9CAB1EE6-4549-4AD1-BA70-ED843ABAED2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
