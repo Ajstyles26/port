@@ -6,6 +6,6 @@
     <PackageReference Include="MudBlazor" Version="6.0.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ecommerce-backend\ecommerce-backend.csproj" />
+    <ProjectReference Include="..\ecommerce.Data\ecommerce.Data.csproj" />
   </ItemGroup>
 </Project>
