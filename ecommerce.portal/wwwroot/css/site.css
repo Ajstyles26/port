@@ -1,1 +1,11 @@
 body { margin: 0; font-family: sans-serif; }
+
+.landing-hero {
+    background: linear-gradient(135deg, #5D5FEF, #9A55F5);
+    color: white;
+    padding: 80px 20px;
+}
+
+.features-section {
+    margin-top: 40px;
+}
