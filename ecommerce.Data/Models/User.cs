@@ -1,6 +1,12 @@
-namespace EcommerceBackend.Models
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
+using ecommerce.Data.Enum;
+
+namespace ecommerce.Data.Models
 {
-    public class User
+    public class User : IdentityUser
     {
         public int Id { get; set; }
         public string Email { get; set; } = string.Empty;

@@ -1,0 +1,13 @@
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\obj\Debug\net8.0\ecommerce.Data.csproj.AssemblyReference.cache
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\obj\Debug\net8.0\ecommerce.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\obj\Debug\net8.0\ecommerce.Data.csproj.CoreCompileInputs.cache
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\obj\Debug\net8.0\ecommerce.Data.sourcelink.json
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\bin\Debug\net8.0\ecommerce.Data.deps.json
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\bin\Debug\net8.0\ecommerce.Data.runtimeconfig.json
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\bin\Debug\net8.0\ecommerce.Data.dll
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\bin\Debug\net8.0\ecommerce.Data.pdb
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\obj\Debug\net8.0\ecommerce.Data.dll
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\obj\Debug\net8.0\refint\ecommerce.Data.dll
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\obj\Debug\net8.0\ecommerce.Data.pdb
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\obj\Debug\net8.0\ecommerce.Data.genruntimeconfig.cache
+C:\Users\adeba\Documents\Github\port\ecommerce.Data\obj\Debug\net8.0\ref\ecommerce.Data.dll

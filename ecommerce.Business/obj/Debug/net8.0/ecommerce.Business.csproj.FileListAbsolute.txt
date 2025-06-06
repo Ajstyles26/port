@@ -1,0 +1,16 @@
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\bin\Debug\net8.0\ecommerce.Business.deps.json
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\bin\Debug\net8.0\ecommerce.Business.dll
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\bin\Debug\net8.0\ecommerce.Business.pdb
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\bin\Debug\net8.0\ecommerce.Data.dll
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\bin\Debug\net8.0\ecommerce.Data.pdb
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\ecommerce.Business.csproj.AssemblyReference.cache
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\ecommerce.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\ecommerce.Business.AssemblyInfoInputs.cache
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\ecommerce.Business.AssemblyInfo.cs
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\ecommerce.Business.csproj.CoreCompileInputs.cache
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\ecommerce.Business.sourcelink.json
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\ecommerc.820560E8.Up2Date
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\ecommerce.Business.dll
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\refint\ecommerce.Business.dll
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\ecommerce.Business.pdb
+C:\Users\adeba\Documents\Github\port\ecommerce.Business\obj\Debug\net8.0\ref\ecommerce.Business.dll

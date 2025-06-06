@@ -1,4 +1,7 @@
-namespace EcommerceBackend.DTOs
+using ecommerce.Data.Enum;
+using ecommerce.Data.Models;
+using System;
+namespace ecommerce.Data.DTOs
 {
     public class UserDto
     {

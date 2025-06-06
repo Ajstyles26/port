@@ -1,4 +1,4 @@
-@page "/index"
+@* @page "/index"
 @inject NavigationManager Nav
 @inject AuthenticationStateProvider AuthProvider
 
@@ -15,12 +15,6 @@
 </AuthorizeView>
 
 @code {
-    private async Task Logout()
-    {
-        if (AuthProvider is SimpleAuthStateProvider provider)
-        {
-            provider.SignOut();
-            Nav.NavigateTo("login", true);
-        }
-    }
-}
+    
+    
+} *@
