@@ -1,20 +1,46 @@
-@* @page "/index"
+@page "/"
 @inject NavigationManager Nav
-@inject AuthenticationStateProvider AuthProvider
+@inject IJSRuntime JS
 
-<h1>Products</h1>
+<MudContainer MaxWidth="MaxWidth.False" Class="landing-hero text-center" id="hero">
+    <MudText Typo="Typo.h2">Welcome to MudBlazor Ecommerce</MudText>
+    <MudText Typo="Typo.subtitle1" Class="mb-8">Find your favorite products and enjoy fast delivery.</MudText>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@(() => Nav.NavigateTo("products"))">
+        Shop Now
+    </MudButton>
+</MudContainer>
 
-<AuthorizeView>
-    <Authorized>
-        <MudText>Welcome!</MudText>
-        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Logout">Logout</MudButton>
-    </Authorized>
-    <NotAuthorized>
-        @Nav.NavigateTo("login", true)
-    </NotAuthorized>
-</AuthorizeView>
+<MudContainer Class="features-section">
+    <MudGrid>
+        @for (var i = 0; i < Features.Count; i++)
+        {
+            <MudItem xs="12" md="4">
+                <MudPaper Class="pa-6 text-center feature-card" id="feature-@i">
+                    <MudIcon Icon="@Features[i].Icon" Size="Size.Large" Color="Color.Primary" />
+                    <MudText Typo="Typo.h6" Class="mt-4">@Features[i].Title</MudText>
+                    <MudText>@Features[i].Description</MudText>
+                </MudPaper>
+            </MudItem>
+        }
+    </MudGrid>
+</MudContainer>
 
 @code {
-    
-    
-} *@
+    private record Feature(string Icon, string Title, string Description);
+
+    private List<Feature> Features = new()
+    {
+        new Feature(Icons.Material.Filled.LocalShipping, "Fast Delivery", "Get your orders quickly."),
+        new Feature(Icons.Material.Filled.Lock, "Secure Payment", "Your transactions are safe."),
+        new Feature(Icons.Material.Filled.Star, "Top Quality", "Only the best products.")
+    };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("gsapBlazor.animateHero", "#hero");
+            await JS.InvokeVoidAsync("gsapBlazor.animateFeatures", ".feature-card");
+        }
+    }
+}
